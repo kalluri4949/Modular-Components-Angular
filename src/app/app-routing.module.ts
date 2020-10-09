@@ -5,8 +5,22 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: '**', component: NotFoundComponent}
+  {
+    path: 'elements',
+    loadChildren: () => import('./elements/elements.module').then(m => m.ElementsModule)
+  },
+  {
+    path: 'collections',
+    loadChildren: () => import('./collections/collections.module').then(m => m.CollectionsModule)
+  },
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
+  }
 ];
 
 @NgModule({

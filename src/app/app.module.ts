@@ -1,5 +1,3 @@
-import { ViewsModule } from './views/views.module';
-import { ModsModule } from './mods/mods.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,8 +9,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
   declarations: [AppComponent, HomeComponent, NotFoundComponent],
   imports: [
     BrowserModule,
-    ViewsModule,
-    ModsModule,
     AppRoutingModule,
   ],
   providers: [],

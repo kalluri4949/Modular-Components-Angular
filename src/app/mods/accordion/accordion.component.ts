@@ -18,7 +18,6 @@ openItemIndex = 0;
     } else {
            this.openItemIndex = index;
     }
-    
   }
 
 }

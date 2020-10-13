@@ -1,1 +1,13 @@
-<p>mods-home works!</p>
+<app-title-divider>
+  Modal
+</app-title-divider>
+<button (click)="onClick()">Show Modal</button>
+<app-modal (close)="onClick()" *ngIf="openModal">
+  <div modalTitle>
+    I am the reusable header
+  </div>
+  <p>Resuable content here</p>
+  <ng-container modalFooter>
+    <button (click)="onClick()" class="ui button">Close Me</button>
+  </ng-container>
+</app-modal>
